@@ -59,7 +59,7 @@ public class SoundCategoryStandardSetting extends StandardSetting<Float> {
     @Override
     public @NotNull AbstractButtonWidget createMainWidget() {
         // see SoundSliderWidget
-        return new SliderWidget(0, 0, 120, 20, this.get()) {
+        return new SliderWidget(0, 0, 120, 20, "", this.get()) {
             {
                 this.updateMessage();
             }

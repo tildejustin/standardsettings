@@ -5,8 +5,7 @@ import com.google.gson.JsonPrimitive;
 import me.contaria.standardsettings.StandardGameOptions;
 import me.contaria.standardsettings.mixin.accessors.DoubleOptionAccessor;
 import me.contaria.standardsettings.mixin.accessors.OptionAccessor;
-import net.minecraft.client.gui.widget.AbstractButtonWidget;
-import net.minecraft.client.gui.widget.GameOptionSliderWidget;
+import net.minecraft.client.gui.widget.*;
 import net.minecraft.client.options.DoubleOption;
 import net.minecraft.client.options.GameOptions;
 import net.minecraft.client.resource.language.I18n;
@@ -55,7 +54,7 @@ public class DoubleOptionStandardSetting extends StandardSetting<Double> {
 
     @Override
     public @NotNull AbstractButtonWidget createMainWidget() {
-        return new GameOptionSliderWidget(this.options, 0, 0, 120, 20, this.option) {
+        return new DoubleOptionSliderWidget(this.options, 0, 0, 120, 20, this.option) {
             @Override
             protected void updateMessage() {
                 this.setMessage(DoubleOptionStandardSetting.this.getText());
